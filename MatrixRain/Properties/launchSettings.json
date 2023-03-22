@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MatrixRain": {
+      "commandName": "Project",
+      "commandLineArgs": "-"
+    }
+  }
+}
