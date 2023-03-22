@@ -65,7 +65,7 @@
                 {
                     randomChars = true;
                 }
-                if (args[i].Contains("--help") || args[i].Contains("-h") || args[i].Contains("-?")) // trosku neprehladne
+                if (args[i].Contains("--help") || args[i].Contains("-h") || args[i].Contains("-?"))
                 {
                     Console.WriteLine("Description:");
                     Console.WriteLine("\tMatrix digital rain - a simplified version of the falling code of letters representing " +
