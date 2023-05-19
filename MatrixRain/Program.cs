@@ -7,7 +7,7 @@
             bool direction = false;         
             var color = ConsoleColor.Green; 
             int delay = 1;                  
-            char characters = 'x';          
+            Type characters = Type.Numeric;          
             bool randomChars = false;       
 
             /*
@@ -48,10 +48,10 @@
                     switch (chosen_characters)
                     {
                         case "Alpha":
-                            characters = 'a';
+                            characters = Type.Alphanumeric;
                             break;
                         case "Numeric":
-                            characters = 'n';
+                            characters = Type.Numeric;
                             break;
                         default:
                             break;

@@ -7,7 +7,7 @@
         private readonly ConsoleColor _color;    // farba znakov, prednastavena zelena
         private readonly bool _randomColors;     // priznak, ci sa budu vykreslovat nahodne farby
         private readonly int _delay;             // spomalenie rychlosti vykreslovania znakov
-        private readonly char _characters;       // typ vykreslovanych znakov, predvolene x = alpha numeric (0...9 a 'A'...'Z')
+        private readonly Type _characters;       // typ vykreslovanych znakov, predvolene x = alpha numeric (0...9 a 'A'...'Z')
         private readonly bool _randomChars;      // bool, ci znaky maju byt nahodne pri kazdom "pade" kvapky, alebo maju byt rovnake pocas celeho padania kvapky
 
         // Trieda Random pre generovanie nahodnych hodnot
@@ -28,7 +28,7 @@
          * Do fieldov sa nastavia zadane parametre.
          * Ak bol zadany argument programu "--random-color", nastavi sa randomColors field na true.
          */
-        public MatrixRain(bool direction, ConsoleColor color, int delay, char characters, bool randomChars) 
+        public MatrixRain(bool direction, ConsoleColor color, int delay, Type characters, bool randomChars) 
         {
             this._direction = direction;
             this._color = color;
@@ -240,16 +240,16 @@
         /*
          * Returne znak(char) podla uzivatelom zadaneho parametra ziskaneho z main-u.
          */
-        private char GetCharacter(char characters)
+        private char GetCharacter(Type characters)
         {
             char alpha = (char)(65 + _rnd.Next(0, 25));
             char numeric = (char)(48 + _rnd.Next(0, 9));
 
-            if (characters == 'a')          // Alpha 
+            if (characters == Type.Alphanumeric)          // Alpha 
             {
                 return alpha;
             }
-            else if (characters == 'n')     // Numeric
+            else if (characters == Type.Numeric)     // Numeric
             {
                 return numeric;
             }

@@ -61,4 +61,10 @@
             set {  _color = value; } 
         }
     }
+
+    enum Type
+    {
+        Alphanumeric,
+        Numeric
+    }
 }
